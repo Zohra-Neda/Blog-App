@@ -11,7 +11,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # rspec-rails
 gem 'rspec-rails'
 
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
