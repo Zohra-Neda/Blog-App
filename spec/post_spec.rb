@@ -10,7 +10,8 @@ RSpec.describe Post, type: :model do
     end
 
     it 'requires title to be maximum 250 characters long' do
-      post = Post.new(author: nil, title: 'x' * 251, text: 'This is my second post', comments_counter: 0, likes_counter: 0)
+      post = Post.new(author: nil, title: 'x' * 251, text: 'This is my second post', comments_counter: 0,
+                      likes_counter: 0)
 
       expect(post.valid?).to be_falsey
       expect(post.errors[:title]).to include('is too long (maximum is 250 characters)')
@@ -24,7 +25,8 @@ RSpec.describe Post, type: :model do
     end
 
     it 'requires likes_counter to be a non-negative integer' do
-      post = Post.new(author: nil, title: 'Programming', text: 'This is my fourth post', comments_counter: 0, likes_counter: -1)
+      post = Post.new(author: nil, title: 'Programming', text: 'This is my fourth post', comments_counter: 0,
+                      likes_counter: -1)
 
       expect(post.valid?).to be_falsey
       expect(post.errors[:likes_counter]).to include('must be greater than or equal to 0')
@@ -34,7 +36,8 @@ RSpec.describe Post, type: :model do
   context 'methods' do
     user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
                        posts_counter: 0)
-    post = Post.create(author: user, title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0)
+    post = Post.create(author: user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                       likes_counter: 0)
 
     describe '#recent_comments' do
       it 'returns the 5 most recent comments' do
