@@ -61,13 +61,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Blog App] <a name="about-project"></a>
 
-**[Blog App]** Ruby application for managing and organizing your favorite books, music albums, and games.
-
-With this app, you can easily store and keep track of your favorite books, music albums, and games. You can also add new entries for books, music albums, or games to expand your collection.
-
-This application provides a convenient way to organize and categorize your entertainment preferences. Whether you are a bookworm, a music enthusiast, or a gaming aficionado, this app will help you keep everything in one place.
-
-Start using the app today to create a personalized catalog of your favorite books, music albums, and games. Stay organized and never lose track of your beloved entertainment choices again!
+**[Blog App]** This is a Ruby on Rails project that provides a platform for users to create and manage their posts, comments, and likes. The application allows users to view other users' profiles. It also provides features to display all the users, their posts, and each user's posts. The application provides a user-friendly interface to manage all the activities related to posts, comments, and likes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -123,7 +117,14 @@ cd Blog-App
 ### Install
 ```
   bundle install
-```  
+```
+
+### Setup Database
+```
+  rails db:create
+  rails db:migrate
+  rails db:seed
+```
 
 ### Usage
 ```
@@ -141,15 +142,11 @@ rspec spec
 - **Add Book** - Add your favorite pots.
 - **Add Comments** - Add your comments.
 - **Add Likes** - Add your likes.
-- **Unit Tests**
-
-
-
+- **Unit Tests** - Test methods and controllers
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **Zohra Neda**
 
@@ -163,11 +160,9 @@ rspec spec
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
 - [ ] **[Add more dynamic pages]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 
