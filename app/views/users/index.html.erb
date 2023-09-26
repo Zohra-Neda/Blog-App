@@ -1,1 +1,6 @@
-<h1>Users List</h1>
+<h1 class="user-title"> Welcome to User Page</h1>
+<div class="user-container">
+    <ul>
+        <%= render partial: 'partials/user', collection: @users%>
+    </ul>
+</div>

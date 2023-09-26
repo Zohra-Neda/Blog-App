@@ -32,7 +32,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('users/show')
     end
 
-    it 'returns the correct placeholder' do
+    it 'returns the correct placeholder text' do
       expect(response.body).to include('Individual Users Details')
     end
   end
