@@ -3,11 +3,11 @@
             <h2><%= @post.title%> By <%= @post.author.name%></h2>
             <ul>
                 <li>Comments: <%= @post.comments_counter%> </li>
-                <li>Likes: <%@post.likes_counter%> </li>
+                <li>Likes: <%=@post.likes_counter%> </li>
             </ul>
     </div>
 
-    <h4 class="comment-title">Comments</h4>
+    <h4 class="comment-title">Comments: <%=@count %></h4>
     <div class="post-body">
         <%=@post.text%>
     </div>
@@ -16,5 +16,12 @@
         <% @post.comments.each do |comment| %>
             <span><%= comment.author.name%> : <%= comment.text%></span>
         <% end %>
+    </div>
+
+    <div class="like-comment-container">
+            <%= form_with model: @like, url:user_post_likes_path(post_id: @post.id) do |l| %>
+                <%= l.submit  "Like", class:"new-post-btn submit-btn"%>
+            <% end %>
+            <%= link_to "Add a comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id), class: 'new-post-btn submit-btn' %>
     </div>
 </div>
