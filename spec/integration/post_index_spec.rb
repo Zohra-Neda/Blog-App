@@ -57,17 +57,3 @@ RSpec.describe 'Posts', type: :feature do
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
