@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
   end
@@ -15,6 +17,13 @@ class CommentsController < ApplicationController
       flash[:alert] = 'An error has occurred while creating the comment'
       render :new
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @post = @comment.post
+    @comment.destroy!
+    redirect_to user_post_path(user_id: @post.author_id, id: @post.id), notice: 'Comment successfully deleted'
   end
 
   private
