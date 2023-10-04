@@ -154,6 +154,12 @@ rspec spec
 - Twitter: [@zohra_neda](https://twitter.com/zohra_neda)
 - LinkedIn: [zohra-neda](https://www.linkedin.com/in/zohra-neda)
 
+👤 **addisalem**
+
+- GitHub: [@addisalemseifu](https://github.com/githubhandle)
+- Twitter: [@Addisalem Seifu](https://twitter.com/addisalems92518)
+- LinkedIn: [addisalem seifu](https://www.linkedin.com/in/addisalemseifu/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
