@@ -3,6 +3,10 @@ class Ability
   def initialize(current_user)
     @user = current_user || User.new
     if @user.role == 'admin'
+      # Define abilities based on user roles or conditions.
+      can :manage, :all # Admin can manage all resources.
+    else
+      can :read, Comment # Regular users can read comments.
       can :delete, Comment
       can :destroy, Comment
       can :delete, Post
