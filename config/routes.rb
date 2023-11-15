@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   get '/sign_out_user', to: 'users#sign_out_user', as: 'sign_out_user'
   devise_for :users
   root "users#index"
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
 
   namespace :api, default: {format: :json} do
     namespace :v1 do
+      get 'swagger.json', to: 'swagger#generate'
       resources :posts, only: %i[index] do
         resources :comments, only: [:create, :index]
       end
